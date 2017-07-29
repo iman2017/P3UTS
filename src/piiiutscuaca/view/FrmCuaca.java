@@ -97,7 +97,8 @@ public class FrmCuaca extends javax.swing.JFrame {
 
         lblSuhu.setFont(new java.awt.Font("Arial Unicode MS", 0, 36)); // NOI18N
         lblSuhu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSuhu.setText("00.0 *C");
+        lblSuhu.setText("C");
+        lblSuhu.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/piiiutscuaca/res/04n.png"))); // NOI18N
 
@@ -124,27 +125,27 @@ public class FrmCuaca extends javax.swing.JFrame {
 
         lblSuhuMax.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         lblSuhuMax.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSuhuMax.setText("00.0 *C");
+        lblSuhuMax.setText("C");
         lblSuhuMax.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblSuhuMin.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         lblSuhuMin.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSuhuMin.setText("00.0 *C");
+        lblSuhuMin.setText("C");
         lblSuhuMin.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblAngin.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         lblAngin.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblAngin.setText("000.0 m/h");
+        lblAngin.setText("m/h");
         lblAngin.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblLembab.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         lblLembab.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblLembab.setText("00.0 %");
+        lblLembab.setText("%");
         lblLembab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblUdara.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
         lblUdara.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblUdara.setText("000.0 hPa");
+        lblUdara.setText("hPa");
         lblUdara.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -184,7 +185,7 @@ public class FrmCuaca extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(lblCuaca2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblCuaca, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -321,25 +322,25 @@ public class FrmCuaca extends javax.swing.JFrame {
         }
 
         if(txtKota.getText().equals("") && cbWaktu.getSelectedItem().equals("Hari Ini")) {
-            lblSuhu.setText("00.0 *C");
-            lblSuhuMax.setText("00.0 *C");
-            lblSuhuMin.setText("00.0 *C");
+            lblSuhu.setText("00.0 "+(char)0x00B0+"C");
+            lblSuhuMax.setText("00.0 "+(char)0x00B0+"C");
+            lblSuhuMin.setText("00.0 "+(char)0x00B0+"C");
             lblAngin.setText("000.0 m/h");
             lblLembab.setText("00.0 %");
             lblUdara.setText("000.0 hPa");
         } else {
             if(txtKota.getText().equals("") && cbWaktu.getSelectedItem().equals("Kemarin")) {
-                lblSuhu.setText("00.0 *C");
-                lblSuhuMax.setText("00.0 *C");
-                lblSuhuMin.setText("00.0 *C");
+                lblSuhu.setText("00.0 "+(char)0x00B0+"C");
+                lblSuhuMax.setText("00.0 "+(char)0x00B0+"C");
+                lblSuhuMin.setText("00.0 "+(char)0x00B0+"C");
                 lblAngin.setText("000.0 m/h");
                 lblLembab.setText("00.0 %");
                 lblUdara.setText("000.0 hPa");
             } else {
                 if(txtKota.getText().equals("Bandung") && cbWaktu.getSelectedItem().equals("Besok")) {
-                    lblSuhu.setText("00.0 *C");
-                    lblSuhuMax.setText("00.0 *C");
-                    lblSuhuMin.setText("00.0 *C");
+                    lblSuhu.setText("00.0 "+(char)0x00B0+"C");
+                    lblSuhuMax.setText("00.0 "+(char)0x00B0+"C");
+                    lblSuhuMin.setText("00.0 "+(char)0x00B0+"C");
                     lblAngin.setText("000.0 m/h");
                     lblLembab.setText("00.0 %");
                     lblUdara.setText("000.0 hPa");
@@ -348,25 +349,25 @@ public class FrmCuaca extends javax.swing.JFrame {
         }
         
         if(txtKota.getText().equals("Bandung") && cbWaktu.getSelectedItem().equals("Hari Ini")) {
-            lblSuhu.setText("22.4 *C");
-            lblSuhuMax.setText("28.1 *C");
-            lblSuhuMin.setText("20.8 *C");
+            lblSuhu.setText("22.4 "+(char)0x00B0+"C");
+            lblSuhuMax.setText("28.1 "+(char)0x00B0+"C");
+            lblSuhuMin.setText("20.8 "+(char)0x00B0+"C");
             lblAngin.setText("50 m/h");
             lblLembab.setText("94.8 %");
             lblUdara.setText("198.4 hPa");
         } else {
             if(txtKota.getText().equals("Bandung") && cbWaktu.getSelectedItem().equals("Kemarin")) {
-                lblSuhu.setText("24.6 *C");
-                lblSuhuMax.setText("32.0 *C");
-                lblSuhuMin.setText("20.4 *C");
+                lblSuhu.setText("24.6 "+(char)0x00B0+"C");
+                lblSuhuMax.setText("32.0 "+(char)0x00B0+"C");
+                lblSuhuMin.setText("20.4 "+(char)0x00B0+"C");
                 lblAngin.setText("101.2 m/h");
                 lblLembab.setText("94.8 %");
                 lblUdara.setText("198.4 hPa");
             } else {
                 if(txtKota.getText().equals("Bandung") && cbWaktu.getSelectedItem().equals("Besok")) {
-                    lblSuhu.setText("22.6 *C");
-                    lblSuhuMax.setText("29.3 *C");
-                    lblSuhuMin.setText("21.8 *C");
+                    lblSuhu.setText("22.6 "+(char)0x00B0+"C");
+                    lblSuhuMax.setText("29.3 "+(char)0x00B0+"C");
+                    lblSuhuMin.setText("21.8 "+(char)0x00B0+"C");
                     lblAngin.setText("98.5 m/h");
                     lblLembab.setText("95.8 %");
                     lblUdara.setText("200.1 hPa");
@@ -375,25 +376,25 @@ public class FrmCuaca extends javax.swing.JFrame {
         }
         
         if(txtKota.getText().equals("Jakarta") && cbWaktu.getSelectedItem().equals("Hari Ini")) {
-            lblSuhu.setText("30.4 *C");
-            lblSuhuMax.setText("33.1 *C");
-            lblSuhuMin.setText("28.8 *C");
+            lblSuhu.setText("30.4 "+(char)0x00B0+"C");
+            lblSuhuMax.setText("33.1 "+(char)0x00B0+"C");
+            lblSuhuMin.setText("28.8 "+(char)0x00B0+"*C");
             lblAngin.setText("88 m/h");
             lblLembab.setText("104.8 %");
             lblUdara.setText("208.2 hPa");
         } else {
             if(txtKota.getText().equals("Jakarta") && cbWaktu.getSelectedItem().equals("Kemarin")) {
-                lblSuhu.setText("29.8 *C");
-                lblSuhuMax.setText("32.0 *C");
-                lblSuhuMin.setText("20.4 *C");
+                lblSuhu.setText("29.8 "+(char)0x00B0+"C");
+                lblSuhuMax.setText("32.0 "+(char)0x00B0+"*C");
+                lblSuhuMin.setText("20.4 "+(char)0x00B0+"C");
                 lblAngin.setText("98.8 m/h");
                 lblLembab.setText("94.8 %");
                 lblUdara.setText("198.4 hPa");
             } else {
                 if(txtKota.getText().equals("Jakarta") && cbWaktu.getSelectedItem().equals("Besok")) {
-                    lblSuhu.setText("22.6 *C");
-                    lblSuhuMax.setText("29.3 *C");
-                    lblSuhuMin.setText("21.8 *C");
+                    lblSuhu.setText("22.6 "+(char)0x00B0+"C");
+                    lblSuhuMax.setText("29.3 "+(char)0x00B0+"C");
+                    lblSuhuMin.setText("21.8 "+(char)0x00B0+"C");
                     lblAngin.setText("98.5 m/h");
                     lblLembab.setText("95.8 %");
                     lblUdara.setText("190.1 hPa");
@@ -402,25 +403,25 @@ public class FrmCuaca extends javax.swing.JFrame {
         }
         
         if(txtKota.getText().equals("Surabaya") && cbWaktu.getSelectedItem().equals("Hari Ini")) {
-            lblSuhu.setText("27.2 *C");
-            lblSuhuMax.setText("28.1 *C");
-            lblSuhuMin.setText("20.8 *C");
+            lblSuhu.setText("27.2 "+(char)0x00B0+"C");
+            lblSuhuMax.setText("28.1 "+(char)0x00B0+"C");
+            lblSuhuMin.setText("20.8 "+(char)0x00B0+"C");
             lblAngin.setText("110 m/h");
             lblLembab.setText("86.2 %");
             lblUdara.setText("166.2 hPa");
         } else {
             if(txtKota.getText().equals("Surabaya") && cbWaktu.getSelectedItem().equals("Kemarin")) {
-                lblSuhu.setText("27.6 *C");
-                lblSuhuMax.setText("31.7 *C");
-                lblSuhuMin.setText("26.2 *C");
+                lblSuhu.setText("27.6 "+(char)0x00B0+"C");
+                lblSuhuMax.setText("31.7 "+(char)0x00B0+"C");
+                lblSuhuMin.setText("26.2 "+(char)0x00B0+"C");
                 lblAngin.setText("101.1 m/h");
                 lblLembab.setText("96.3 %");
                 lblUdara.setText("218.4 hPa");
             } else {
                 if(txtKota.getText().equals("Surabaya") && cbWaktu.getSelectedItem().equals("Besok")) {
-                    lblSuhu.setText("22.6 *C");
-                    lblSuhuMax.setText("29.3 *C");
-                    lblSuhuMin.setText("21.8 *C");
+                    lblSuhu.setText("22.6 "+(char)0x00B0+"C");
+                    lblSuhuMax.setText("29.3 "+(char)0x00B0+"C");
+                    lblSuhuMin.setText("21.8 "+(char)0x00B0+"C");
                     lblAngin.setText("98.5 m/h");
                     lblLembab.setText("95.8 %");
                     lblUdara.setText("200.1 hPa");
